@@ -214,11 +214,7 @@ combat_test.register_bow('crossbow', {
 	-- `crit_chance` 10% chance, 5 is 20% chance
 	-- (1 / crit_chance) * 100 = % chance
 	crit_chance = 5,
-	on_use = function(itemstack, user, pointed_thing) 
-    combat_test.shoot(itemstack, user, pointed_thing)
-    -- x_bows.shoot(itemstack, user, pointed_thing)
-    -- x_bows.shoot(itemstack, user, pointed_thing)
-	end,
+	on_use = combat_test.shoot,
 	inventory_image = "crossbow.png",
 	inventory_image_charged = "crossbow_ready.png",
 	recipe = {
